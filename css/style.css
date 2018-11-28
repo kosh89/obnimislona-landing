@@ -32,18 +32,10 @@ nav {
 }
 
 #menu {
-    padding: 0;
-    margin: 0;
-    display: block;
-}
-
-#menu li {
-    display: block;
-    float: left;
-    margin-right: 40px;
-    border: 2px solid white;
-    padding: 3px;
-    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding-top: 30px;
 }
 
 #menu a {    
@@ -51,6 +43,10 @@ nav {
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 5px;
 }
 
 .titles__first {
@@ -106,16 +102,15 @@ h1 {
 
 .services {
     display: flex;   
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;        
 }
 
 .services__item {    
-    width: 30%;
-    text-align: center;    
+    width: 300px;
+    text-align: center;
+    padding-bottom: 20px;
 }
-
-
 
 .services__item h3 {
     font-size: 18px;
@@ -140,26 +135,29 @@ h1 {
 
 .photos {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;    
 }
 
-.photos img {
-    width: 30%;    
-    height: 30%;
+.photos__item {    
+    width: 300px;    
+    padding: 20px;
+}
+.photos__item img {
+    width: 100%;
 }
 
 .contacts {
     margin-bottom: 80px;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
 .contacts__item {
-    width: 30%;    
+    width: 300px;
+    padding: 20px; 
     text-align: center;
-
 }
 
 .contacts__item a {
@@ -170,8 +168,6 @@ h1 {
     font-weight: 100;
     color: #777777;
 }
-
-
 
 #map {
     width: 100%;

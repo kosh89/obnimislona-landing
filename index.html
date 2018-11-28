@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Обними слона</title>
     <link rel="stylesheet" href="css/style.css">
@@ -14,8 +14,15 @@
     <header>
         <div class="container">
             <div class="heading clearfix">
-                <!-- Сюда вставить логотип -->
-                <nav>
+                
+                <div id="menu">
+                    <a href="#">Домой</a>
+                    <a href="#">Услуги</a>
+                    <a href="#">Галерея</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <!-- <nav>
                     <ul id="menu">
                         <li><a href="#">Домой</a></li>
                         <li><a href="#">Услуги</a></li>
@@ -23,7 +30,8 @@
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
-                </nav>
+                </nav> -->
+                
             </div>
             <div class="titles">
                 <div class="titles__first">
@@ -80,9 +88,12 @@
                 </p>
             </div>
             <div class="photos">
-                <img src="img/gallery/gallery (1).jpg" alt="gallery_photo">
-                <img src="img/gallery/gallery (2).jpg" alt="gallery_photo">
-                <img src="img/gallery/gallery (3).jpg" alt="gallery_photo">
+                <div class="photos__item">
+                    <img src="img/gallery/gallery (1).jpg" alt="gallery_photo"></div>
+                <div class="photos__item">
+                    <img src="img/gallery/gallery (2).jpg" alt="gallery_photo"></div>
+                <div class="photos__item">
+                    <img src="img/gallery/gallery (3).jpg" alt="gallery_photo"></div>
             </div>
         </div>
     </section>
@@ -146,7 +157,7 @@
         <div class="container">
             <div class="title">
                 <h2>
-                    Социальные сети
+                    Соцсети
                 </h2>
                 <p>
                     Мы есть везде
