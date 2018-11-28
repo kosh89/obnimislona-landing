@@ -17,9 +17,12 @@ div {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    border: 2px solid red;
 }
+
+.titles {border: 2px solid black;}
 
 nav {
     float: right;
@@ -45,7 +48,7 @@ nav {
 }
 
 .titles__first {
-    font-size: 35px;
+    font-size: 32px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -53,7 +56,7 @@ nav {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 42px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -193,4 +196,20 @@ footer {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
+}
+
+/*срабатывает при 655*/
+@media screen and (max-width: 731px) {
+    #menu {
+        flex-direction: column; 
+        align-items: flex-end;
+    }
+
+    .titles__first {
+        font-size: 16px;
+    }
+
+    .titles h1 {
+        font-size: 20px;
+    }
 }
