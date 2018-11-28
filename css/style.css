@@ -10,12 +10,7 @@ header {
     padding-bottom: 100px;
 }
 
-.clearfix:after {
-    content: '';
-    display: table;
-    width: 100%;
-    clear: both;
-}
+
 
 div {
     box-sizing: border-box;
@@ -112,6 +107,10 @@ h1 {
     padding-bottom: 20px;
 }
 
+.services__item img {
+    width: 64px;
+}
+
 .services__item h3 {
     font-size: 18px;
     margin-bottom: 5px;
@@ -158,6 +157,10 @@ h1 {
     width: 300px;
     padding: 20px; 
     text-align: center;
+}
+
+.contacts__item img {
+    width: 64px;
 }
 
 .contacts__item a {
