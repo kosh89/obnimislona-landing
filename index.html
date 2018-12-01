@@ -7,20 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Обними слона</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="sendmail/contactform.js" defer></script>
     <script src="script/script.js" defer></script>
 </head>
-
+<!-- <div id="hidden_contact_us">
+    <div id="inputs">
+        <input class="inputs_item" type="text" name="name" placeholder="Ваше имя">
+        <input class="inputs_item" type="email" name="contact" placeholder="Ваш email или телефон">
+        <textarea class="inputs_item" name="message" placeholder="Ваше письмо" rows="4" cols="2"></textarea>
+        <input class="inputs_item" type="submit">
+        <p id="hideContactUs">Скрыть</p>
+    </div>
+</div> -->
+<div class="form-container">
+    <div class="note"></div>
+    <div class="fields">
+        <form class="ajax-contact-form" action="">
+            <p><input type="text" name="name" value="" placeholder="Имя"></p>
+            <div class="row">
+                <div class="col"><input type="tel" name="tel" value="" placeholder="Телефон"></div>
+                <div class="col"><input type="email" name="email" value="" placeholder="E-mail"></div>
+                </div>
+            <label>Текст</label>
+            <textarea name="message" cols="40" rows="3"></textarea>
+            <input type="submit" name="submit" class="form-container__btn" value="Отправить">
+        </form>
+    </div>
+</div>
 <body>
     <header>
         <div class="container">
-            <div class="heading">                
-                <div id="menu">                    
+            <div class="heading">
+                <div id="menu">
                     <a href="#">Услуги</a>
                     <a href="#">Галерея</a>
                     <a href="#">О нас</a>
                     <a href="#">Контакты</a>
-                    
-                </div>                
+                </div>
             </div>
             <div class="titles">
                 <div class="titles__first">
@@ -28,9 +52,12 @@
                 </div>
                 <h1>Всё от идеи до реализации Вашего мероприятия!</h1>
             </div>
-            <a class="button" href="#">Связаться с нами</a>
+            <a id="button">Связаться с нами</a>
         </div>
     </header>
+
+
+    </div>
     <section id="services">
         <div class="container">
             <div class="title">
@@ -155,9 +182,11 @@
             <div class="social">
                 <a class="social__item" href="https://www.facebook.com/obnimislona" target="_blank"><img src="img/social_icons/facebook.png"
                         alt="facebook"></a>
-                <a class="social__item" href="https://vk.com/id262808356" target="_blank"><img src="img/social_icons/vk.png" alt="vk"></a>
+                <a class="social__item" href="https://vk.com/id262808356" target="_blank"><img src="img/social_icons/vk.png"
+                        alt="vk"></a>
                 <a class="social__item" href="http://instagram.com/obnimislona" target="_blank"><img src="img/social_icons/instagram.png"
                         alt="instagram"></a>
+                <a class="social__item" href="#" target="_blank"><img src="img/social_icons/youtube.png" alt="youtube"></a>
             </div>
         </div>
     </section>
