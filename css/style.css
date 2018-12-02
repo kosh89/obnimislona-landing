@@ -72,6 +72,7 @@ header {
 .form-container__btn:hover {
     box-shadow: 0 0 5px 2px rgb(255, 255, 255);
 }
+
 .form-container__btn:active {
     background: #fcdc68
 }
@@ -127,6 +128,14 @@ header {
     margin: 0 auto;
     display: block;
     margin-top: 60px;
+}
+
+#button:hover {
+    box-shadow: 0 0 5px 2px rgb(255, 255, 255);
+}
+
+#button:active {
+    background: #fcdc68
 }
 
 .title {
