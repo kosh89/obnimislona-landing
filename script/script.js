@@ -6,10 +6,12 @@ document.getElementById('hideContactUs').onclick = function() {
     document.getElementsByClassName('form-container')[0].style.top = '-45%';
 }
 
-document.getElementById('form-container__btn').onclick = function() {
-    const timer = setTimeout(dong, 2000);
+document.getElementsByClassName('form-container__btn')[0].onclick = function() {        
+    const timer = setTimeout(hideModal, 2000);        
 }
 
-function dong() {
-    document.getElementsByClassName('form-container')[0].style.top = '-45%';
+function hideModal() {
+    if (document.getElementsByClassName('fields')[0].style.display == 'none') {
+        document.getElementsByClassName('form-container')[0].style.top = '-45%';
+    }
 }
