@@ -69,7 +69,7 @@ echo 'OK';
 }
 else
 {
-echo '<div class="notification_error">'.$error.'</div>';
+echo '<p class="notification_error">'.$error.'</p>';
 }
 
 }
