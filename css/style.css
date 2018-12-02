@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #222222;
-    
+    box-sizing: border-box;
 }
 
 header {
@@ -23,6 +23,7 @@ header {
 }
 
 .note p {
+    padding-top: 30px;
     font-size: 20px;    
     color: white;  
     text-align: center;
