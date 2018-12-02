@@ -26,6 +26,10 @@ header {
     vertical-align: middle;    
 }
 
+.notification_error {
+    text-align: center;
+}
+
 .form-container {
     position: fixed;
     width: 40%;
