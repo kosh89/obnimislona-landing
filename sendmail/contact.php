@@ -48,7 +48,7 @@ if(!$error)
 
 $name_tema = "=?utf-8?b?". base64_encode($name) ."?=";
 
-$subject ="Новая заявка с сайта domain.name";
+$subject ="Новая заявка с сайта obnimislona.com";
 $subject1 = "=?utf-8?b?". base64_encode($subject) ."?=";
 /*
 $message ="\n\nСообщение: ".$message."\n\nИмя: " .$name."\n\nТелефон: ".$tel."\n\n";

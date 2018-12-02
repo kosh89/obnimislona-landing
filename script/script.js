@@ -1,4 +1,5 @@
 document.getElementById('button').onclick = function() {
+    hideModal();
     document.getElementsByClassName('form-container')[0].style.top = '10%';
 }
 
