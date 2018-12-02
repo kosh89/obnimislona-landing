@@ -15,27 +15,22 @@ header {
     width: 70%;
     margin: 0 auto;    
 }
-.note {
-     
-}
-.note p {    
-    font-size: 20px;    
-    color: white;  
-}
 
 .notification_error {
+    font-size: 20px;    
+    color: white;  
     text-align: center;
 }
 
 .form-container {
     position: fixed;
     width: 40%;
-    height: 40%;
+    min-height: 40%;
     background: #fed136;   
     border-radius: 20px; 
     left: 50%;
     margin-left: -20%;
-    top: -40%;
+    top: -45%;
     transition: all cubic-bezier(.97,-0.7,0,1.5) 0.5s;
 }
 

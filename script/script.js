@@ -3,5 +3,5 @@ document.getElementById('button').onclick = function() {
 }
 
 document.getElementById('hideContactUs').onclick = function() {
-    document.getElementsByClassName('form-container')[0].style.top = '-40%';
+    document.getElementsByClassName('form-container')[0].style.top = '-45%';
 }
