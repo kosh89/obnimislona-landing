@@ -9,7 +9,7 @@ url: "sendmail/contact.php",
 data: str,
 success: function(msg) {
 if(msg == 'OK') {
-result = '<p>Мы ответим Вам в ближайшее время</p>';
+result = '<p class="notification_error">Мы ответим Вам в ближайшее время</p>';
 $(".fields").hide();
 } else {
 result = msg;
