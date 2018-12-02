@@ -76,37 +76,6 @@ header {
     background: #fcdc68
 }
 
-/* #hidden_contact_us {    
-    position: fixed;
-    width: 80%;
-    height: 40%;
-    background: #fed136;   
-    border-radius: 10px; 
-    left: 50%;
-    margin-left: -40%;
-    top: -40%;
-    
-    transition: all cubic-bezier(.97,-0.7,0,1.5) 0.5s;
-}
-
-#inputs {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-#inputs p {
-    text-align: center;
-    color: white;
-}
-
-.inputs_item {
-    width: 80%;
-    margin: 20px auto;
-    padding: 5px;
-    border-radius: 10px;
-} */
-
 #menu {
     display: flex;
     flex-flow: row wrap;
@@ -288,6 +257,11 @@ footer {
     .titles h1 {
         font-size: 36px;
     }
+
+    .form-container {
+        width: 60%;
+        margin-left: -30%;
+    }
 }
 @media screen and (max-width: 846px) {
     .titles__first {
@@ -307,6 +281,10 @@ footer {
 @media screen and (max-width: 612px) {
     .container {
         width: 90%;
+    }
+    .form-container {
+        width: 70%;
+        margin-left: -35%;
     }
 }
 
@@ -342,6 +320,16 @@ footer {
     .titles h1 {
         font-size: 20px;
     }
+
+    .form-container {
+        width: 90%;
+        margin-left: -45%;
+    }
+
+    .form-container__btn {
+        width: 60%;
+    }
+
 }
 
 @media screen and (max-width: 378px) {
@@ -364,4 +352,5 @@ footer {
         width: 150px;
         padding: 8px 0;        
     }
+    
 }
