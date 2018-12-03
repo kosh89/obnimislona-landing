@@ -9,6 +9,9 @@ $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
 $message = htmlspecialchars($_POST['message']);
 $tel = htmlspecialchars($_POST["tel"]);
+$event = htmlspecialchars($_POST['event']);
+$place = htmlspecialchars($_POST['place']);
+$members = htmlspecialchars($_POST['members']);
 $error = '';
 
 if(!$name)
@@ -50,10 +53,8 @@ $name_tema = "=?utf-8?b?". base64_encode($name) ."?=";
 
 $subject ="Новая заявка с сайта obnimislona.com";
 $subject1 = "=?utf-8?b?". base64_encode($subject) ."?=";
-/*
-$message ="\n\nСообщение: ".$message."\n\nИмя: " .$name."\n\nТелефон: ".$tel."\n\n";
-*/
-$message1 ="\n\nИмя: ".$name."\n\nТелефон: " .$tel."\n\nE-mail: " .$email."\n\nСообщение: ".$message."\n\n";	
+
+$message1 ="\n\nИмя: ".$name."\n\nМероприятие: " .$event."\n\nТелефон: " .$tel."\n\nE-mail: " .$email."\n\nСообщение: ".$message."\n\n";	
 
 
 $header = "Content-Type: text/plain; charset=utf-8\n";
