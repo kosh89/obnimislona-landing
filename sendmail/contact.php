@@ -54,7 +54,7 @@ $name_tema = "=?utf-8?b?". base64_encode($name) ."?=";
 $subject ="Новая заявка с сайта obnimislona.com";
 $subject1 = "=?utf-8?b?". base64_encode($subject) ."?=";
 
-$message1 ="\n\nИмя: ".$name."\n\nМероприятие: " .$event."\n\Количество участников: " .$members."\n\nМесто проведения: " .$place."\n\nТелефон: " .$tel."\n\nE-mail: " .$email."\n\nСообщение: ".$message."\n\n";	
+$message1 ="\n\nИмя: ".$name."\n\nМероприятие: " .$event."\n\nКоличество участников: " .$members."\n\nМесто проведения: " .$place."\n\nТелефон: " .$tel."\n\nE-mail: " .$email."\n\nСообщение: ".$message."\n\n";	
 
 
 $header = "Content-Type: text/plain; charset=utf-8\n";
