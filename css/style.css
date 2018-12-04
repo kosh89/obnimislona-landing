@@ -23,7 +23,7 @@ header {
 }
 
 .note p {
-    padding-top: 30px;
+    
     font-size: 20px;    
     color: white;  
     text-align: center;
@@ -54,7 +54,7 @@ header {
 
 .contactUs_item, .form-container__btn {
     width: 80%;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
     border: none;
     border-radius: 10px;
     padding: 10px;
@@ -291,6 +291,7 @@ footer {
     .container {
         width: 90%;
     }
+
     .form-container {
         width: 70%;
         margin-left: -35%;
@@ -347,9 +348,12 @@ footer {
     }
 }
 @media screen and (max-width: 399px) {
+    .container {
+        width: 97%;
+    }
+
     #menu a {
-        font-size: 16px;
-        border: 1px solid white;
+        font-size: 16px;        
     }
 }
 
@@ -381,21 +385,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 353px) {
-    #menu a {
-        margin: 5px 2px;
-    }
-}
-
 @media screen and (max-width: 344px) {
     #menu a {
         font-size: 14px;        
-    }
-}
-
-@media screen and (max-width: 325px) {
-    #menu a {
-        font-size: 14px;
-        margin: 5px 1px;
     }
 }
