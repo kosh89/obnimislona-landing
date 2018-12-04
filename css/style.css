@@ -318,9 +318,9 @@ footer {
         justify-content: center;
     }
     #menu a {
-        font-size: 14px;
+        font-size: 18px;
         padding: 2px;
-        margin: 3px;
+        margin: 5px 3px;
     }
     .titles__first {
         font-size: 14px;
@@ -341,9 +341,21 @@ footer {
 
 }
 
+@media screen and (max-width: 420px) {
+    #menu a {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 399px) {
+    #menu a {
+        font-size: 16px;
+        border: 1px solid white;
+    }
+}
+
 @media screen and (max-width: 378px) {
     #menu a {
-        font-size: 12px;
+        font-size: 15px;
     }
     .titles__first {
         font-size: 12px;
@@ -362,4 +374,28 @@ footer {
         padding: 8px 0;        
     }
     
+}
+@media screen and (max-width: 361px) {
+    #menu a {
+        margin: 5px 2px;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    #menu a {
+        margin: 5px 2px;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    #menu a {
+        font-size: 14px;        
+    }
+}
+
+@media screen and (max-width: 325px) {
+    #menu a {
+        font-size: 14px;
+        margin: 5px 1px;
+    }
 }

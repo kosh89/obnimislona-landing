@@ -6,7 +6,7 @@ document.getElementById('button').onclick = function() {
 
 //кнопку "скрыть" хорошо бы заменить на клик вне формы
 document.getElementById('hideContactUs').onclick = function() {
-    document.getElementsByClassName('form-container')[0].style.top = '-50%';
+    document.getElementsByClassName('form-container')[0].style.top = '-120%';
 }
 
 document.getElementsByClassName('form-container__btn')[0].onclick = function() {        
