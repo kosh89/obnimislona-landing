@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Обними слона</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script/jquery-3.3.1.min.js"></script>
-    <script src="script/anchor.js"></script>    
+    <link rel="stylesheet" href="fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="fancybox/dist/fancy-options.css">
+    <script src="script/jquery-3.3.1.min.js"></script>    
+    <script src="fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="fancybox/dist/fancy-options.js" defer></script>    
+    <script src="script/anchor.js" defer></script>
     <script src="sendmail/contactform.js" defer></script>
     <script src="script/gallery-tabs.js" defer></script>
     <script src="script/script.js" defer></script>
@@ -18,7 +22,7 @@
         <p class="notification_error">Заполните поля</p>
     </div>
     <div class="fields">
-        <form class="ajax-contact-form" action="">            
+        <form class="ajax-contact-form" action="">
             <input class="contactUs_item" type="text" name="event" value="" placeholder="Мероприятие" required>
             <input class="contactUs_item" type="number" name="members" value="" placeholder="Количество участников" required>
             <input class="contactUs_item" type="text" name="place" value="" placeholder="Место проведения" required>
@@ -26,11 +30,12 @@
             <input class="contactUs_item" type="tel" name="tel" value="" placeholder="Телефон">
             <input class="contactUs_item" type="email" name="email" value="" placeholder="E-mail" required>
             <textarea class="contactUs_item" name="message" cols="40" rows="3" placeholder="Комментарий"></textarea>
-            <input class="form-container__btn" type="submit" name="submit"  value="Рассчитать">
+            <input class="form-container__btn" type="submit" name="submit" value="Рассчитать">
             <p id="hideContactUs">Скрыть</p>
         </form>
     </div>
 </div>
+
 <body>
     <header>
         <div class="container">
@@ -98,15 +103,7 @@
                 <p>
                     Фотки, фотки, фотки
                 </p>
-            </div>
-            <!-- <div class="photos">
-                <div class="photos__item">
-                    <img src="img/gallery/gallery (1).jpg" alt="gallery_photo"></div>
-                <div class="photos__item">
-                    <img src="img/gallery/gallery (2).jpg" alt="gallery_photo"></div>
-                <div class="photos__item">
-                    <img src="img/gallery/gallery (3).jpg" alt="gallery_photo"></div>
-            </div> -->
+            </div>            
             <div id="gallery-tabs">
                 <div class="gallery-tabs_item" data-tab="0">Свадьбы</div>
                 <div class="gallery-tabs_item" data-tab="1">Корпоративы</div>
@@ -114,45 +111,44 @@
             </div>
             <div id="photo-block">
                 <div class="photo-block_item">
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(1)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(2)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(3)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(4)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(5)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(6)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(7)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(8)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(9)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(10)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(11)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(12)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(13)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(14)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(15)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(16)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(17)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(18)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(19)-preview.png" alt="wedding"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/weddings/preview/wedding-(20)-preview.png" alt="wedding"></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(1).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-1.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(2).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-2.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(3).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-3.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(4).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-4.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(5).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-5.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(6).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-6.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(7).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-7.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(8).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-8.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(9).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-9.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(10).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-10.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(11).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-11.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(12).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-12.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(13).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-13.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(14).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-14.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(15).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-15.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(16).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-16.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(17).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-17.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(18).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-18.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(19).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-19.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(20).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-20.jpg" /></a></div>                    
                 </div>
                 <div class="photo-block_item">
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(1)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(2)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(3)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(4)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(5)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(6)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(7)-preview.png" alt="corporate"></div>
-                    <div class="photo-block_item-div"><img src="img/gallery/corporate/preview/corporate-(8)-preview.png" alt="corporate"></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(1).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-1.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(2).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-2.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(3).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-3.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(4).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-4.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(5).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-5.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(6).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-6.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(7).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-7.jpg" /></a></div>
                 </div>
                 <div class="photo-block_item">
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(1)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(2)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(3)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(4)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(5)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(6)-preview.png" alt="children"></div>
-                        <div class="photo-block_item-div"><img src="img/gallery/children/preview/children-(7)-preview.png" alt="children"></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(1).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-1.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(2).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-2.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(3).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-3.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(4).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-4.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(5).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-5.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(6).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-6.jpg" /></a></div>
+                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(7).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-7.jpg" /></a></div>
                 </div>
             </div>
         </div>
@@ -239,6 +235,8 @@
             <p>© Copyright 2018 ObnimiSolna.com</p>
         </div>
     </footer>
+
+    
 </body>
 
 </html>

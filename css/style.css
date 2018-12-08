@@ -212,6 +212,14 @@ header {
     background: #114646fa;    
 }
 
+.gallery-tabs_item:first-child {
+    border-top-left-radius: 10px
+}
+
+.gallery-tabs_item:last-child {
+    border-top-right-radius: 10px
+}
+
 .gallery-tabs_item:not(:first-child) {
     background: rgba(4, 63, 63, 0.767);
 }
@@ -221,7 +229,9 @@ header {
     flex-flow: row wrap;    
     background: #004141fa;
     font-size: 0;
-    padding: .5vw;    
+    padding: .5vw;
+    border-bottom-right-radius: 10px; 
+    border-bottom-left-radius: 10px;
 }
 
 .photo-block_item:not(:first-child) {
@@ -231,11 +241,16 @@ header {
 .photo-block_item-div {
     flex: auto;
     width: 150px;    
-    margin: .5vw;
+    margin: .2vw;
 }
 
 .photo-block_item img {    
     width: 100%;
+    border-radius: 20px;
+}
+
+.photo-block_item img:hover {
+    opacity: 0.77;
 }
 
 .contacts {
