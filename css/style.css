@@ -166,7 +166,10 @@ header {
 
 .services__item {    
     width: 300px;
-    text-align: center;
+    text-align: center;    
+}
+
+.services__item:not(:last-child) {    
     padding-bottom: 20px;
 }
 
@@ -187,12 +190,12 @@ header {
 
 
 #services, #about {
-    padding-bottom: 120px;
+    padding-bottom: 90px;
 }
 
 #gallery, #contacts {
     background: #f7f7f7;
-    padding-bottom: 120px;
+    padding-bottom: 90px;
 }
 
 #gallery-tabs {
