@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fancybox/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="fancybox/dist/fancy-options.css">
-    <script src="script/jquery-3.3.1.min.js"></script>    
+    <script src="script/jquery-3.3.1.min.js"></script>
     <script src="fancybox/dist/jquery.fancybox.min.js"></script>
-    <script src="fancybox/dist/fancy-options.js" defer></script>    
+    <script src="fancybox/dist/fancy-options.js" defer></script>
     <script src="script/anchor.js" defer></script>
     <script src="sendmail/contactform.js" defer></script>
     <script src="script/gallery-tabs.js" defer></script>
     <script src="script/script.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="script/yamap.js"></script>
 </head>
 <div class="form-container">
     <div class="note">
@@ -103,7 +105,7 @@
                 <p>
                     Фотки, фотки, фотки
                 </p>
-            </div>            
+            </div>
             <div id="gallery-tabs">
                 <div class="gallery-tabs_item" data-tab="0">Свадьбы</div>
                 <div class="gallery-tabs_item" data-tab="1">Корпоративы</div>
@@ -111,44 +113,78 @@
             </div>
             <div id="photo-block">
                 <div class="photo-block_item">
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(1).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-1.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(2).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-2.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(3).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-3.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(4).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-4.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(5).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-5.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(6).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-6.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(7).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-7.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(8).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-8.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(9).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-9.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(10).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-10.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(11).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-11.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(12).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-12.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(13).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-13.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(14).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-14.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(15).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-15.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(16).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-16.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(17).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-17.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(18).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-18.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(19).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-19.jpg" /></a></div>
-                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(20).png" data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-20.jpg" /></a></div>                    
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(1).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-1.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(2).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-2.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(3).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-3.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(4).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-4.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(5).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-5.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(6).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-6.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(7).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-7.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(8).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-8.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(9).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-9.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(10).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-10.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(11).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-11.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(12).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-12.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(13).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-13.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(14).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-14.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(15).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-15.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(16).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-16.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(17).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-17.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(18).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-18.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(19).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-19.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/weddings/big/big-wedding-(20).png"
+                            data-fancybox="weddings"><img src="img/gallery/weddings/small/wed-small-20.jpg" /></a></div>
                 </div>
                 <div class="photo-block_item">
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(1).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-1.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(2).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-2.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(3).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-3.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(4).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-4.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(5).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-5.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(6).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-6.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(7).png" data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-7.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(1).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-1.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(2).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-2.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(3).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-3.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(4).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-4.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(5).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-5.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(6).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-6.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/corporate/big/big-corporate-(7).png"
+                            data-fancybox="corporate"><img src="img/gallery/corporate/small/small-corporate-7.jpg" /></a></div>
                 </div>
                 <div class="photo-block_item">
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(1).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-1.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(2).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-2.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(3).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-3.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(4).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-4.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(5).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-5.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(6).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-6.jpg" /></a></div>
-                        <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(7).png" data-fancybox="children"><img src="img/gallery/children/small/small-children-7.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(1).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-1.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(2).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-2.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(3).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-3.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(4).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-4.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(5).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-5.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(6).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-6.jpg" /></a></div>
+                    <div class="photo-block_item-div"><a href="img/gallery/children/big/big-children-(7).png"
+                            data-fancybox="children"><img src="img/gallery/children/small/small-children-7.jpg" /></a></div>
                 </div>
             </div>
         </div>
@@ -164,14 +200,19 @@
                 </p>
             </div>
             <div class="about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. In cursus turpis massa tincidunt dui ut ornare lectus sit. Porta non pulvinar
-                neque laoreet suspendisse interdum consectetur libero id. Adipiscing tristique risus nec feugiat in
-                fermentum. Sed risus ultricies tristique nulla aliquet. Nulla pellentesque dignissim enim sit amet
-                venenatis urna. Pellentesque elit eget gravida cum sociis natoque penatibus et. Bibendum at varius vel
-                pharetra vel turpis. Lobortis elementum nibh tellus molestie nunc non blandit massa. Pulvinar mattis
-                nunc sed blandit libero volutpat sed. Amet consectetur adipiscing elit pellentesque habitant morbi
-                tristique.
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. In cursus turpis massa tincidunt dui ut ornare lectus sit. Porta non pulvinar
+                    neque laoreet suspendisse interdum consectetur libero id. Adipiscing tristique risus nec feugiat in
+                    fermentum. Sed risus ultricies tristique nulla aliquet. Nulla pellentesque dignissim enim sit amet
+                    venenatis urna. Pellentesque elit eget gravida cum sociis natoque penatibus et. Bibendum at varius
+                    vel
+                    pharetra vel turpis. Lobortis elementum nibh tellus molestie nunc non blandit massa. Pulvinar
+                    mattis
+                    nunc sed blandit libero volutpat sed. Amet consectetur adipiscing elit pellentesque habitant morbi
+                    tristique.
+                </p>
             </div>
         </div>
     </section>
@@ -189,36 +230,29 @@
                 <div class="contacts__item">
                     <a href="tel:+79118803200">
                         <img src="img/contacts/phone.png" alt="Телефон">
-                        <h3>+7‑911‑880‑32‑00</h3>
+                        <p>+7‑911‑880‑32‑00</p>
                     </a>
                 </div>
                 <div class="contacts__item">
                     <a href="mailto:obnimislona@gmail.com?subject=Хотим праздник!">
                         <img src="img/contacts/email.png" alt="email">
-                        <h3>obnimislona@gmail.com</h3>
+                        <p>obnimislona@gmail.com</p>
                     </a>
                 </div>
                 <div class="contacts__item">
                     <img src="img/contacts/address.png" alt="адрес">
-                    <h3>Псков, Октябрьский пр-т, 54</h3>
+                    <p>Псков, Октябрьский пр-т, 54</p>
                 </div>
             </div>
             <div id="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9af1f484e4503db4b947f6a17bf4693b0dcf39e7f6ec0d2eed6c97a8c56af38f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
-                </script>
+                <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9af1f484e4503db4b947f6a17bf4693b0dcf39e7f6ec0d2eed6c97a8c56af38f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
+                </script> -->
             </div>
         </div>
     </section>
-    <section id="social">
-        <div class="container">
-            <div class="title">
-                <h2>
-                    Соцсети
-                </h2>
-                <p>
-                    Мы есть везде
-                </p>
-            </div>
+
+    <footer>
+        <div class="containter">
             <div class="social">
                 <a class="social__item" href="https://www.facebook.com/obnimislona" target="_blank"><img src="img/social_icons/facebook.png"
                         alt="facebook"></a>
@@ -228,15 +262,11 @@
                         alt="instagram"></a>
                 <a class="social__item" href="#" target="_blank"><img src="img/social_icons/youtube.png" alt="youtube"></a>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="containter">
             <p>© Copyright 2018 ObnimiSolna.com</p>
         </div>
     </footer>
 
-    
+
 </body>
 
 </html>

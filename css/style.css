@@ -37,7 +37,7 @@ header {
     border-radius: 20px; 
     left: 50%;
     margin-left: -20%;
-    top: -120%;
+    top: -160%;
     transition: all cubic-bezier(.97,-0.7,0,1.5) 0.5s;
 }
 
@@ -186,7 +186,7 @@ header {
 }
 
 
-#services, #about, #social {
+#services, #about {
     padding-bottom: 120px;
 }
 
@@ -253,6 +253,10 @@ header {
     opacity: 0.77;
 }
 
+.about p {
+    color: #777777;
+}
+
 .contacts {
     margin-bottom: 80px;
     display: flex;
@@ -261,8 +265,7 @@ header {
 }
 
 .contacts__item {
-    width: 300px;
-    padding: 20px; 
+    width: 33%;
     text-align: center;
 }
 
@@ -274,8 +277,7 @@ header {
     text-decoration: none;    
 }
 
-.contacts__item h3 {
-    font-weight: 100;
+.contacts__item p {    
     color: #777777;
 }
 
@@ -287,16 +289,24 @@ header {
 .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-#social img {
-    width: 64px;
+.social__item {
+    margin: 3px;
+}
+
+.social__item img {
+    width: 32px;
+}
+
+.social__item img:hover {
+    opacity: 0.7;
 }
 
 footer {
     color: #777777;
-    background: #f7f7f7;
+    background: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -314,6 +324,17 @@ footer {
     .form-container {
         width: 60%;
         margin-left: -30%;
+    }
+
+    .contacts {        
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .contacts__item {
+        width: auto;
+        padding-bottom: 20px;
+        text-align: center;
     }
 }
 @media screen and (max-width: 846px) {
