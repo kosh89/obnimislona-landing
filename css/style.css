@@ -98,13 +98,13 @@ header {
     margin: 5px;
 }
 
-#menu a:hover {
+/* #menu a:hover {
     opacity: 0.7;
-}
+} */
 
-.titles {
+/* .titles {
     opacity: 0.9;
-}
+} */
 
 .titles__first {
     font-size: 32px;
@@ -137,11 +137,12 @@ header {
     margin: 0 auto;
     display: block;
     margin-top: 60px;
+    transition: all ease 1s;
 }
 
-#button:hover {
+/* #button:hover {
     opacity: 0.9;
-}
+} */
 
 #button:active {
     background: #fcdc68
