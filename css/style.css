@@ -11,11 +11,9 @@ header {
     padding-bottom: 100px;
 }
 
-
-
 .container {
     width: 70%;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .notification_error {
@@ -24,8 +22,7 @@ header {
     text-align: center;
 }
 
-.note p {
-    
+.note p {    
     font-size: 20px;    
     color: white;  
     text-align: center;
@@ -41,6 +38,11 @@ header {
     margin-left: -20%;
     top: -160%;
     transition: all cubic-bezier(.97,-0.7,0,1.5) 0.5s;
+    z-index: 99999;    
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #hideContactUs {
@@ -52,6 +54,12 @@ header {
     display: flex;
     flex-direction: column;  
     margin-top: 5px;  
+}
+
+#ajax-contact-form_btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .contactUs_item, .form-container__btn {
@@ -68,15 +76,19 @@ header {
     background: #fed136;
     font-weight: bold;
     font-size: 18px;
-    color: white;    
+    color: white;
+    border: 1px solid #fed136;
 }
 
 .form-container__btn:hover {
-    box-shadow: 0 0 5px 2px rgb(255, 255, 255);
+    background: #fed136;
+    border: 1px solid #fff;
 }
 
 .form-container__btn:active {
-    background: #fcdc68
+    background: #fed136;
+    border: 1px solid #fed136;
+    box-shadow:  0 0 0 2px;
 }
 
 #menu {
@@ -98,13 +110,9 @@ header {
     margin: 5px;
 }
 
-/* #menu a:hover {
+#menu a:hover {
     opacity: 0.7;
-} */
-
-/* .titles {
-    opacity: 0.9;
-} */
+}
 
 .titles__first {
     font-size: 32px;
@@ -112,7 +120,6 @@ header {
     text-transform: uppercase;
     text-align: center;
     margin-top: 135px;
-    
 }
 
 .titles h1 {
@@ -120,7 +127,6 @@ header {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    
 }
 
 #button {
@@ -140,12 +146,12 @@ header {
     transition: all ease 1s;
 }
 
-/* #button:hover {
-    opacity: 0.9;
-} */
+#button:hover {
+    background: #ffda5d;
+}
 
 #button:active {
-    background: #fcdc68
+    background: #e05d15;    
 }
 
 .title {
@@ -208,43 +214,49 @@ header {
     padding-bottom: 90px;
 }
 
+#gallery_shadow {    
+    border: 1px solid #cacaca;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 88px -28px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 88px -28px rgba(0,0,0,1);
+    box-shadow: 0px 0px 88px -28px rgba(0,0,0,1);
+}
+
 #gallery-tabs {
     display: flex;
     width: 100%;
     flex-direction: row;
     
 }
+
 .gallery-tabs_item {
     display: flex;
     width: 100%;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     height: 4vh;
-    color: white;
-    padding: 5px 7px;
-    background: #004141fa;    
-}
-
-.gallery-tabs_item:first-child {
-    border-top-left-radius: 10px
-}
-
-.gallery-tabs_item:last-child {
-    border-top-right-radius: 10px
+    color: #585454;
+    padding: 10px 7px;
+    transition: all .3s;
+    background: #f7f7f7;
+    border-bottom: 3px solid #cacaca;
 }
 
 .gallery-tabs_item:not(:first-child) {
-    background: rgba(4, 63, 63, 0.767);
+    background: rgb(255, 255, 255);
+    border-bottom: 3px solid #ffffff;
+}
+
+.gallery-tabs_item:hover {
+    border-bottom: 3px solid #cacaca !important; /* чтобы js не отменял hover */
 }
 
 .photo-block_item {
     display: flex;
     flex-flow: row wrap;    
-    background: #004141fa;
+    background: #ffffff;
     font-size: 0;
-    padding: .5vw;
-    border-bottom-right-radius: 10px; 
-    border-bottom-left-radius: 10px;
+    padding: .5vw;    
 }
 
 .photo-block_item:not(:first-child) {
@@ -255,15 +267,18 @@ header {
     flex: auto;
     width: 150px;    
     margin: .2vw;
+    overflow: hidden;
 }
 
 .photo-block_item img {    
     width: 100%;
-    border-radius: 20px;
+    transition: all 0.5s;
 }
 
 .photo-block_item img:hover {
-    opacity: 0.77;
+    -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .about p {
@@ -470,8 +485,6 @@ footer {
         width: 150px;
         padding: 8px 0;        
     }
-    
-    
 }
 @media screen and (max-width: 361px) {
     #menu a {
@@ -489,5 +502,31 @@ footer {
 @media screen and (max-width: 329px) {
     .photo-block_item-div {           
         margin: 0;
+    }
+}
+
+
+/*горизонтальная ориентация*/
+@media screen and (max-height: 560px) {
+    .notification_error {
+        margin: 10px;
+    }
+
+    .ajax-contact-form {
+        flex-flow: row wrap;
+    }
+
+    .ajax-contact-form textarea {
+        width: 90%;
+        height: 1em;
+    }
+
+    .contactUs_item {
+        width: 40%;
+        margin: 0 auto 4px auto;
+    }
+
+    .form-container__btn {
+        margin: 0 auto 0 auto;
     }
 }
