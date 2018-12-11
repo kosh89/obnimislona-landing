@@ -27,11 +27,11 @@ document.getElementById('gallery-tabs').onclick = function(event) {
         for (i=0; i<document.getElementsByClassName('gallery-tabs_item').length; i++) {
             if (i != tabNum) {
                 document.getElementsByClassName('photo-block_item')[i].style.display = 'none';
-                document.getElementsByClassName('gallery-tabs_item')[i].style.background = '#fff';
-                document.getElementsByClassName('gallery-tabs_item')[i].style.borderBottom = '3px solid #fff';
+                document.getElementsByClassName('gallery-tabs_item')[i].style.background = '#f7f7f7';
+                document.getElementsByClassName('gallery-tabs_item')[i].style.borderBottom = '3px solid #f7f7f7';
             } else {
                 document.getElementsByClassName('photo-block_item')[i].style.display = 'flex';
-                document.getElementsByClassName('gallery-tabs_item')[i].style.background = '#f7f7f7';
+                document.getElementsByClassName('gallery-tabs_item')[i].style.background = '#fff';
                 document.getElementsByClassName('gallery-tabs_item')[i].style.borderBottom = '3px solid #cacaca';
             }
         }
