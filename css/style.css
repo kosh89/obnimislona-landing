@@ -594,6 +594,7 @@ footer {
     .ajax-contact-form textarea {
         width: 90%;
         height: 1em;
+        resize: none;
     }
 
     .contactUs_item {
