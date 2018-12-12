@@ -344,50 +344,33 @@ footer {
     text-align: center;
 }
 
-
-
-/* ///////////////////////////////////////////////// */
-#we-work {
-	width: 100%;
-    margin: 0;    
-}
-
-#how-we-work {
+#how-we-work, #dotes {
 	display: flex;
-	position: relative;
 	flex-direction: row;
-	justify-content: space-evenly;
+	align-items: center;	
 }
 
-.how-we-work__item {
+#how-we-work {	
+	width: 100%;
+	margin: 0 auto;	
+}
+
+#how-we-work__item {
     display: flex;
-    min-width: 180px;
-    max-width: 180px;
-	height: 200px;	
-	position: relative;
-	box-shadow: 0 0 40px -15px;	
-	background: white;	
-	border: 1px solid #c1c1c1;	
-    flex-direction: column;    
+    flex-direction: column;
+	min-width: 180px;
+    max-width: 180px;	
+    height: 200px;
+	background: white;	    
+    box-shadow: 0 0 45px -15px;	
+    border: 1px solid #c1c1c1;
 }
-
-/* .how-we-work__item:not(:last-child):after {
-    content:"\27A4";
-    font-size: 30px;
-    color: #2b2b2b;
-	display: block;
-	z-index: 2;
-	position: relative;
-	position: absolute;
-	left: 25vh;
-	top: 83px;
-    transition: all 1s;     
-} */
 
 .how-we-work__item__step {
-	height: 20%;
-	padding: 10px 0 0 5px;
-	margin: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 45px;
+    vertical-align: middle;
 	background: #ffa500e6;
 	border-bottom: 1px solid #c1c1c1;	
 	color: #fbfafa;
@@ -397,37 +380,40 @@ footer {
 }
 
 .how-we-work__item__text {
-	padding: 0 10px;
-	height: 80%;	
-	font-size: 18px;	
+    margin: 0;
+	padding: 10px 10px;		
+	font-size: 17px;	
 }
 
-@media screen and (max-width: 1690px) {
-	.how-we-work__item:not(:last-child):after {
-		/* left: 215px; */
-	}
+#dotes {	
+	width: 100%;
+	justify-content: space-evenly;	
+	height: 100px;
 }
 
+.dotes_item {
+	width: 15px;
+	height: 15px;
+	background: #3790ef;
+	border-radius: 50px;
+}
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1290px) {
 	#how-we-work {
-		position: relative;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.how-we-work__item:not(:last-child) {
-		margin-bottom: 50px;
+		flex-direction: column;		
 	}
 	
-	/* .how-we-work__item:not(:last-child):after {
-		transform: rotate(90deg);
-		top: 205px;
-		left: 85px
-	} */
+	#block {
+		margin: 0 auto;
+	}
+	
+	#dotes {
+		flex-direction: column;
+		max-width: 15px;
+		margin: 0 auto;
+	}
 }
 
-/* ************************************************* */
 
 @media screen and (max-width: 982px) {
     .titles__first {
