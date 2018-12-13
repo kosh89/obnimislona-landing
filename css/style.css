@@ -18,8 +18,7 @@ header {
 
 .notification_error {
     font-size: 20px;    
-    color: white;  
-    text-align: center;
+    color: white;
 }
 
 .note p {    
@@ -29,10 +28,13 @@ header {
 }
 
 .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: fixed;
     width: 40%;
     min-height: 40%;
-    background: #fed136;   
+    background: #fed136;
     border-radius: 20px; 
     left: 50%;
     margin-left: -20%;
