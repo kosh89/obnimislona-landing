@@ -6,6 +6,8 @@ const fade = document.getElementById('fade');
 
 btnCalc.onclick = function() {
     if (fields[0].style.display == 'none') {
+        formContainer[0].style.top = '10%';
+        fade.style.display = 'block';
         setTimeout(hideModal, 2000);
     } else {
         formContainer[0].style.top = '10%';
