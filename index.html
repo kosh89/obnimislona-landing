@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,37 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fancybox/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="fancybox/dist/fancy-options.css">
-    <script src="script/jquery-3.3.1.min.js"></script>
-    <script src="fancybox/dist/jquery.fancybox.min.js"></script>
-    <script src="fancybox/dist/fancy-options.js" defer></script>
-    <script src="script/anchor.js" defer></script>
-    <script src="sendmail/contactform.js" defer></script>
-    <script src="script/script.js" defer></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="script/yamap.js"></script>
 </head>
-<div class="form-container">
-    <div class="note">
-        <p class="notification_error">Заполните поля</p>
-    </div>
-    <div class="fields">
-        <form class="ajax-contact-form" action="">
-            <input class="contactUs_item" type="text" name="event" value="" placeholder="Мероприятие" required>
-            <input class="contactUs_item" type="number" name="members" value="" placeholder="Количество участников"
-                required>
-            <input class="contactUs_item" type="text" name="place" value="" placeholder="Место проведения" required>
-            <input class="contactUs_item" type="text" name="name" value="" placeholder="Имя" required>
-            <input class="contactUs_item" type="tel" name="tel" value="" placeholder="Телефон">
-            <input class="contactUs_item" type="email" name="email" value="" placeholder="E-mail" required>
-            <textarea class="contactUs_item" name="message" cols="40" rows="3" placeholder="Комментарий"></textarea>
-            <div id="ajax-contact-form_btns">
-                <input class="form-container__btn" type="submit" name="submit" value="Рассчитать">
-                <p id="hideContactUs">Скрыть</p>
-            </div>
-        </form>
-    </div>
-</div>
-
 <body>
     <header>
         <div class="container">
@@ -52,24 +21,38 @@
                 </div>
             </div>
             <div class="titles">
-                <div class="titles__first">
-                    Организация праздников и событий
-                </div>
+                <div class="titles__first"><p>Организация праздников и событий</p></div>
                 <h1>Всё от идеи до реализации Вашего мероприятия!</h1>
             </div>
-            <a id="button">Калькулятор</a>
+            <a id="btnCalc">Калькулятор</a>
         </div>
     </header>
+    <div class="form-container">
+        <div class="note">
+            <p class="notification_error">Заполните поля</p>
+        </div>
+        <div class="fields">
+            <form class="ajax-contact-form" action="">
+                <input class="contactUs_item" type="text" name="event" value="" placeholder="Мероприятие" required>
+                <input class="contactUs_item" type="number" name="members" value="" placeholder="Количество участников" required>
+                <input class="contactUs_item" type="text" name="place" value="" placeholder="Место проведения" required>
+                <input class="contactUs_item" type="text" name="name" value="" placeholder="Имя" required>
+                <input class="contactUs_item" type="tel" name="tel" value="" placeholder="Телефон">
+                <input class="contactUs_item" type="email" name="email" value="" placeholder="E-mail" required>
+                <textarea class="contactUs_item" name="message" cols="40" rows="3" placeholder="Комментарий"></textarea>
+                <div id="ajax-contact-form_btns">
+                    <input class="btnSubmit" type="submit" name="submit" value="Рассчитать">
+                    <p id="hideContactUs">Скрыть</p>
+                </div>
+            </form>
+        </div>
     </div>
+    <div id="fade"></div>
     <section id="services">
         <div class="container">
             <div class="title">
-                <h2>
-                    Услуги
-                </h2>
-                <p>
-                    Организуем Ваше мероприятие
-                </p>
+                <h2>Услуги</h2>
+                <p>Организуем Ваше мероприятие</p>
             </div>
             <div class="services">
                 <div class="services__item">
@@ -99,12 +82,8 @@
     <section id="gallery">
         <div class="container">
             <div class="title">
-                <h2>
-                    Галерея
-                </h2>
-                <p>
-                    Фотки, фотки, фотки
-                </p>
+                <h2>Галерея</h2>
+                <p>Фотки, фотки, фотки</p>
             </div>
             <div id="gallery_shadow">
                 <div id="gallery-tabs">
@@ -194,12 +173,8 @@
     <section id="about">
         <div class="container">
             <div class="title">
-                <h2>
-                    О нас
-                </h2>
-                <p>
-                    Как мы работаем
-                </p>
+                <h2>О нас</h2>
+                <p>Как мы работаем</p>
             </div>           
             <div id="how-we-work">
                 <div id="how-we-work__item">
@@ -239,12 +214,8 @@
     <section id="contacts">
         <div class="container">
             <div class="title">
-                <h2>
-                    Контакты
-                </h2>
-                <p>
-                    Как нас найти, как с нами связаться
-                </p>
+                <h2>Контакты</h2>
+                <p>Как нас найти, как с нами связаться</p>
             </div>
             <div class="contacts">
                 <div class="contacts__item">
@@ -281,5 +252,15 @@
             <p>© Copyright 2018 ObnimiSolna.com</p>
         </div>
     </footer>
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="fancybox/dist/fancy-options.js"></script>
+    <script src="script/anchor.js"></script>
+    <script src="sendmail/contactform.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="script/yamap.js"></script>
 </body>
 </html>

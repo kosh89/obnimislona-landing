@@ -5,10 +5,10 @@ function init() {
         zoom: 17
     });
 
-    myMap.behaviors.disable([
+/*     myMap.behaviors.disable([
         'drag',
         'scrollZoom'        
-    ]);
+    ]); */
 
     myMap.controls.remove('trafficControl')
                   .remove('fullscreenControl')

@@ -48,6 +48,7 @@ textarea {
 #hideContactUs {
     color: white;
     margin: 0 0 5px 15px;
+    cursor: pointer;
 }
 
 .ajax-contact-form {
@@ -62,7 +63,7 @@ textarea {
     width: 100%;
 }
 
-.contactUs_item, .form-container__btn {
+.contactUs_item, .btnSubmit {
     width: 80%;
     margin: 0 auto 10px auto;
     border: none;
@@ -71,32 +72,44 @@ textarea {
     outline: none;
 }
 
-.form-container__btn {
+.btnSubmit {
     width: 40%;    
     background: #fed136;
     font-weight: bold;
     font-size: 18px;
     color: white;
     border: 1px solid #fed136;
+    cursor: pointer;
 }
 
-.form-container__btn:hover {
+.btnSubmit:hover {
     background: #fed136;
     border: 1px solid #fff;
 }
 
-.form-container__btn:active {
+.btnSubmit:active {
     background: #fed136;
     border: 1px solid #fed136;
     box-shadow:  0 0 0 2px;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.8;
+    z-index: 10;
 }
 
 #menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    padding-top: 30px;
-    transition: all ease 1s;
+    padding-top: 30px;    
 }
 
 #menu a {    
@@ -133,7 +146,7 @@ textarea {
     text-align: center;
 }
 
-#button {
+#btnCalc {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
@@ -148,13 +161,14 @@ textarea {
     display: block;
     margin-top: 60px;
     transition: all ease 1s;
+    cursor: pointer;
 }
 
-#button:hover {
+#btnCalc:hover {
     background: #ffda5d;
 }
 
-#button:active {
+#btnCalc:active {
     background: #e05d15;    
 }
 
@@ -244,6 +258,7 @@ textarea {
     transition: all .3s;
     background: #fff;
     border-bottom: 3px solid #cacaca;
+    cursor: pointer;
 }
 
 .gallery-tabs_item:not(:first-child) {
@@ -395,7 +410,7 @@ footer {
 	width: 15px;
 	height: 15px;
 	background: #3790ef;
-	border-radius: 50px;
+	border-radius: 50%;
 }
 
 @media screen and (max-width: 1290px) {
@@ -484,7 +499,7 @@ footer {
         font-size: 28px;
     }
 
-    .button {
+    #btnCalc {
         font-size: 16px;        
         width: 200px;
         padding: 15px 0;        
@@ -513,7 +528,7 @@ footer {
         margin-left: -45%;
     }
 
-    .form-container__btn {
+    .btnSubmit {
         width: 60%;
     }
 
@@ -555,7 +570,7 @@ footer {
     .contacts__item h3 {
         font-size: 17px;
     }
-    .button {
+    #btnCalc {
         font-size: 12px;        
         width: 150px;
         padding: 8px 0;        
@@ -593,8 +608,7 @@ footer {
 
     .ajax-contact-form textarea {
         width: 90%;
-        height: 1em;
-        resize: none;
+        height: 1em;        
     }
 
     .contactUs_item {
@@ -602,7 +616,7 @@ footer {
         margin: 0 auto 4px auto;
     }
 
-    .form-container__btn {
+    .btnSubmit {
         margin: 0 auto 0 auto;
     }
 }

@@ -1,4 +1,4 @@
-document.getElementById('button').onclick = function() {
+/* document.getElementById('btnCalc').onclick = function() {
     document.getElementsByClassName('form-container')[0].style.top = '10%';
     //Если уже отправили, то окно уедет наверх.
     setTimeout(hideModal, 2000);;
@@ -9,7 +9,7 @@ document.getElementById('hideContactUs').onclick = function() {
     document.getElementsByClassName('form-container')[0].style.top = '-160%';
 }
 
-document.getElementsByClassName('form-container__btn')[0].onclick = function() {        
+document.getElementsByClassName('btnSubmit')[0].onclick = function() {        
     setTimeout(hideModal, 2000);
 }
 
@@ -18,7 +18,7 @@ function hideModal() {
     if (document.getElementsByClassName('fields')[0].style.display == 'none') {
         document.getElementsByClassName('form-container')[0].style.top = '-160%';
     }
-}
+} */
 
 //Вкладки галереи
 document.getElementById('gallery-tabs').onclick = function(event) {
@@ -35,6 +35,5 @@ document.getElementById('gallery-tabs').onclick = function(event) {
                 document.getElementsByClassName('gallery-tabs_item')[i].style.borderBottom = '3px solid #cacaca';
             }
         }
-    }
-    
+    }    
 }
