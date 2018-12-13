@@ -18,11 +18,16 @@ fade.onclick = function() {
 }
 
 //Отправляем, через 2с модалка уезжает
-btnSubmit[0].onclick = function() {        
-    setTimeout(hideModal, 2000);
+btnSubmit[0].onclick = function() {
+    if (fields[0].style.display == 'none') {
+        setTimeout(hideModal, 2000);
+    }    
 }
 
 function hideModal() {
     formContainer[0].style.top = '-160%';
     fade.style.display = 'none';
 }
+
+
+
