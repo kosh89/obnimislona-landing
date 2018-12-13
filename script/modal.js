@@ -4,32 +4,26 @@ const btnSubmit = document.getElementsByClassName('btnSubmit');
 const fields = document.getElementsByClassName('fields');
 const fade = document.getElementById('fade');
 
-btnCalc.onclick = function() {
-    if (fields[0].style.display == 'none') {
-        formContainer[0].style.top = '10%';
-        fade.style.display = 'block';
-        setTimeout(hideModal, 2000);
-    } else {
-        formContainer[0].style.top = '10%';
-        fade.style.display = 'block';
-    }
+document.getElementById('btnCalc').onclick = function () {
+    fade.style.display = 'block';
+    formContainer[0].style.top = '10%';
+    //Если уже отправили, то окно уедет наверх.
+    setTimeout(hideModal, 2000);;
 }
 
-fade.onclick = function() {
-    hideModal();
-}
-
-//Отправляем, через 2с модалка уезжает
-btnSubmit[0].onclick = function() {
-    if (fields[0].style.display == 'none') {
-        setTimeout(hideModal, 2000);
-    }    
-}
-
-function hideModal() {
+fade.onclick = function () {
     formContainer[0].style.top = '-160%';
     fade.style.display = 'none';
 }
 
+//Отправляем, через 2с модалка уезжает
+btnSubmit[0].onclick = function () {
+    setTimeout(hideModal, 2000);
+}
 
-
+function hideModal() {
+    if (fields[0].style.display == 'none') {
+        formContainer[0].style.top = '-160%';
+        fade.style.display = 'none';
+    }
+}

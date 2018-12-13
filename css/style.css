@@ -26,6 +26,7 @@ header {
     font-size: 20px;    
     color: white;  
     text-align: center;
+    line-height: 300px;
 }
 
 .form-container {
