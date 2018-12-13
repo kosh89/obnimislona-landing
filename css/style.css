@@ -46,12 +46,6 @@ textarea {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#hideContactUs {
-    color: white;
-    margin: 0 0 5px 15px;
-    cursor: pointer;
-}
-
 .ajax-contact-form {
     display: flex;
     flex-direction: column;  
