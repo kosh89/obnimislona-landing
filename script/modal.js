@@ -22,8 +22,7 @@ btnSubmit[0].onclick = function () {
 }
 
 function hideModal() {
-    if (fields[0].style.display == 'none') {
-        formContainer[0].style.lineHeight = '300px';
+    if (fields[0].style.display == 'none') {        
         formContainer[0].style.top = '-160%';
         fade.style.display = 'none';
     }

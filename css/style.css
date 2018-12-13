@@ -25,8 +25,7 @@ header {
 .note p {    
     font-size: 20px;    
     color: white;  
-    text-align: center;
-    line-height: 300px;
+    text-align: center;    
 }
 
 .form-container {
@@ -44,6 +43,7 @@ header {
 
 textarea {
     font-family: Arial, Helvetica, sans-serif;
+    resize: none;
 }
 
 .ajax-contact-form {
