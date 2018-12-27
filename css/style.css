@@ -156,8 +156,7 @@ textarea {
     padding: 20px 0;
     margin: 0 auto;
     display: block;
-    margin-top: 60px;
-    transition: all ease 1s;
+    margin-top: 60px;    
     cursor: pointer;
 }
 
@@ -356,7 +355,7 @@ footer {
     text-align: center;
 }
 
-#how-we-work, #dotes {
+#how-we-work, .dotes {
 	display: flex;
 	flex-direction: row;
 	align-items: center;	
@@ -367,7 +366,7 @@ footer {
 	margin: 0 auto;	
 }
 
-#how-we-work__item {
+.how-we-work__item {
     display: flex;
     flex-direction: column;
 	min-width: 180px;
@@ -397,7 +396,7 @@ footer {
 	font-size: 17px;	
 }
 
-#dotes {	
+.dotes {	
 	width: 100%;
 	justify-content: space-evenly;	
 	height: 100px;
@@ -406,26 +405,44 @@ footer {
 .dotes_item {
 	width: 15px;
 	height: 15px;
-	background: #3790ef;
-	border-radius: 50%;
+	background: #808080;
+    border-radius: 50%;
+    
 }
 
 @media screen and (max-width: 1290px) {
-	#how-we-work {
-		flex-direction: column;		
-	}
+	.how-we-work__item {
+        min-width: 150px;
+        max-width: 150px;	
+        height: 150px;        
+    }
+
+    .how-we-work__item__step {
+        font-size: 14px;
+    }
+
+    .how-we-work__item__text {
+        font-size: 14px;
+    }
 	
 	#block {
 		margin: 0 auto;
 	}
 	
-	#dotes {
-		flex-direction: column;
-		max-width: 15px;
+	.dotes {		
 		margin: 0 auto;
-	}
+    }
+    
+    .dotes_item:first-child {
+        display: none;
+    }
 }
 
+@media screen and (max-width: 1110px) {
+    .dotes_item {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 982px) {
     .titles__first {
@@ -457,6 +474,39 @@ footer {
     .services__item {    
         width: auto;
         padding: 0 15px 20px 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .how-we-work__item {
+        min-width: 140px;
+        max-width: 140px;	
+        height: 140px;        
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #how-we-work {	
+        flex-direction: column;
+    }
+
+    .how-we-work__item {
+        min-width: 180px;
+        max-width: 180px;	
+        height: 200px;
+        margin-bottom: 20px;
+    }   
+
+    .how-we-work__item__step {
+        font-size: 18px;
+    }
+
+    .how-we-work__item__text {
+        font-size: 17px;
+    }
+
+    .dotes {
+        display: none;
     }
 }
 
